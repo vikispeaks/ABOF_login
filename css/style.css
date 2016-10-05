@@ -1,10 +1,17 @@
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: #333;
 }
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+a, a:hover, a:link, a:visited {
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
 }
 
 ul li {
@@ -38,15 +45,33 @@ ul li {
 }
 
 .content__carousel {
+  padding: 10px;
+}
 
+.content__carousel--holder {
+  border-right: 1px solid #ccc;
+  height: 595px;
 }
 
 .content__form ul li{
   padding: 20px 0;
 }
 
+.content__form::before {
+  content: "OR";
+  top: 280px;
+  position: relative;
+  left: -43px;
+  background: #fff;
+  padding: 10px;
+}
+
 .content__form ul li input[type=text]{
   height: 32px;
+}
+
+.content__form a {
+  text-decoration: underline;
 }
 
 .footer__wrapper {
@@ -55,6 +80,16 @@ ul li {
   padding-top: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+
+  .content__carousel--holder {
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+  }
+
+  .content__form::before {
+    top: -20px;
+    left: 50%;
+  }
 
 }

@@ -18,36 +18,38 @@
           <img src="assets/abof-logo.png" alt="..." class="img-responsive text-center" />
         </div>
         <div class="nav__wrapper row">
-          <a href="#" class="col-xs-2">What's Hot</a>
-          <a href="#" class="col-xs-2">Men</a>
-          <a href="#" class="col-xs-2">Women</a>
-          <span class="col-xs-6"><input type="text" placeholder="Search for Products, Brands.." class="pull-right"></span>
+          <a href="#" class="col-sm-2 col-xs-6">What's Hot</a>
+          <a href="#" class="col-sm-2 hidden-xs">Men</a>
+          <a href="#" class="col-sm-2 hidden-xs">Women</a>
+          <span class="col-xs-6 col-sm-6"><input type="text" placeholder="Search for Products, Brands.." class="pull-right"></span>
         </div>
         <div class="content__wrapper row">
-          <div class="content__carousel col-xs-6">
-            Images
+          <div class="content__carousel col-xs-12 col-sm-6">
+            <h3>SHOP</h3>
+            <div class="content__carousel--holder"></div>
           </div>
-          <div class="content__form col-xs-6">
+          <div class="content__form col-xs-12 col-sm-6">
+            <h3>SIGN IN</h3>
             <ul>
               <li class="row">
                 <span class="col-xs-4">Email<sup>*</sup></span>
-                <input type="text" class="col-xs-8">
+                <input type="text" id="user-email" class="col-xs-8">
               </li>
               <li class="row">
                 <span class="col-xs-4">Password<sup>*</sup></span>
-                <input type="text" class="col-xs-8">
+                <input type="password" id="user-pasword" class="col-xs-8">
               </li>
               <li class="row">
                 <span class="col-xs-4">First Name<sup>*</sup></span>
-                <input type="text" class="col-xs-8">
+                <input type="text" id="first-name" class="col-xs-8">
               </li>
               <li class="row">
                 <span class="col-xs-4">Last Name<sup>*</sup></span>
-                <input type="text" class="col-xs-8">
+                <input type="text" id="last-name" class="col-xs-8">
               </li>
               <li class="row">
                 <span class="col-xs-4">Mobile<sup>*</sup></span>
-                <input type="text" class="col-xs-8">
+                <input type="tel" id="user-mobile" class="col-xs-8">
               </li>
               <li class="row">
                 <span class="col-xs-4">Gender</span>
@@ -62,7 +64,7 @@
                 </span>
               </li>
               <li class="row">
-                <button class="btn btn-default col-xs-8 pull-right " type="button">Apply</button>
+                <button class="btn btn-default col-xs-8 pull-right " type="button" onclick="App.validateForm()">Apply</button>
               </li>
             </ul>
           </div>
